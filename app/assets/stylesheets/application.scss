@@ -11,3 +11,20 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.btn-add{
+  background-color: $custom-primary;
+  border: 2px solid $custom-primary;
+  bottom: 25px;
+  border-radius: 50%;
+  font-size: 30px;
+  position: fixed;
+  right: 25px;
+  transition: .3s;
+
+  &:hover{
+    background-color: #fff;
+    border: 2px solid $custom-primary;
+    color: $custom-primary;
+  }
+}

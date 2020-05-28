@@ -1,6 +1,16 @@
-<ul class="list-group">
-  <% @cocktails.each do |cocktail| %>
-    <li class="list-group-item"><%= link_to cocktail.name, cocktail %></li>
+
+<div class="container">
+  <h1 class="text-center my-5">Mister Cocktail</h1>
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-lg-4 my-1">
+        <div class="card">
+          <h3><%= link_to cocktail.name, cocktail %></h3>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <%= link_to new_cocktail_path, class: 'btn btn-primary btn-add' do %>
+    <i class="fas fa-plus"></i>
   <% end %>
-</ul>
-<%= link_to 'Create Cocktail', new_cocktail_path, class: 'btn btn-primary' %>
+</div>
