@@ -1,12 +1,11 @@
 <div class="banner mb-3">
-
   <h1 class="text-center py-5">Mister Cocktail</h1>
 </div>
 <div class="container">
   <div class="row">
     <% @cocktails.each do |cocktail| %>
       <div class="col-lg-4 my-1">
-        <div class="card">
+        <div class="card" style="background-image: linear-gradient(260deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%), url('<%= cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
           <h3><%= link_to cocktail.name, cocktail %></h3>
         </div>
       </div>
@@ -16,3 +15,4 @@
     <i class="fas fa-plus"></i>
   <% end %>
 </div>
+

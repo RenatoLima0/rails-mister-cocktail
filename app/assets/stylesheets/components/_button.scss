@@ -1,0 +1,31 @@
+.btn-add{
+  background-color: $custom-primary;
+  border: 2px solid $custom-primary;
+  bottom: 25px;
+  border-radius: 50%;
+  font-size: 30px;
+  position: fixed;
+  right: 25px;
+  transition: .3s;
+  animation: pulse 0.7s infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+
+  &:hover{
+    background-color: #fff;
+    border: 2px solid $custom-primary;
+    color: $custom-primary;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    filter: brightness(50%);
+  }
+  100% {
+    transform: scale(1.1);
+    filter: brightness(100%);
+  }
+}
