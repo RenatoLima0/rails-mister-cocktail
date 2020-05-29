@@ -5,8 +5,11 @@
       <%= simple_form_for [ @cocktail, @dose ] do |f| %>
         <%= f.input :description %>
         <%= f.association :ingredient %>
-        <%= f.submit "Submit Dose", class: "btn btn-primary" %>
+        <%= f.submit "Submit Dose", class: "btn btn-success" %>
       <% end %>    
+    </div>
+    <div class="col-8 text-center">
+      <%= link_to 'Back', @cocktail, class: 'btn btn-primary text-center mt-3' %>
     </div>
   </div>
 </div>
